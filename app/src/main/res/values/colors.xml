@@ -2,4 +2,34 @@
 <resources>
     <color name="black">#FF000000</color>
     <color name="white">#FFFFFFFF</color>
+
+<!--    <color name="colorPrimary">#6200EE</color>-->
+<!--    <color name="colorPrimaryLight">#BB86FC</color>-->
+<!--    <color name="colorSecondary">#03DAC6</color>-->
+<!--    <color name="colorTertiary">#3700B3</color>-->
+<!--    <color name="colorSurface">#FFFFFF</color>-->
+    <color name="colorOnSurface">#000000</color>
+<!--    <color name="colorOnPrimary">#FFFFFF</color>-->
+<!--    <color name="colorOnSecondary">#000000</color>-->
+<!--    <color name="colorOnTertiary">#FFFFFF</color>-->
+
+    <!-- Optional: Accent/alert colors -->
+<!--    <color name="colorAccent">#FFC107</color>-->
+    <color name="colorError">#B00020</color>
+
+
+    <color name="colorPrimary">#4CAF50</color>         <!-- Green (Recycle) -->
+    <color name="colorSecondary">#FF9800</color>       <!-- Orange (Food) -->
+    <color name="colorTertiary">#03A9F4</color>        <!-- Blue (Centers) -->
+    <color name="colorAccent">#9C27B0</color>          <!-- Purple (History) -->
+    <color name="colorPrimaryContainer">#C8E6C9</color> <!-- Light Green (Rewards) -->
+    <color name="colorSecondaryContainer">#FFECB3</color> <!-- Light Orange (Tips) -->
+    <color name="colorSurface">#FFFFFF</color>         <!-- White background -->
+    <color name="colorOnPrimary">#FFFFFF</color>       <!-- White on Green/Blue/Red -->
+    <color name="colorOnSecondary">#FFFFFF</color>     <!-- White on Orange -->
+    <color name="colorOnTertiary">#FFFFFF</color>      <!-- White on Blue -->
+    <color name="colorOnAccent">#FFFFFF</color>        <!-- White on Purple -->
+    <color name="colorOnPrimaryContainer">#000000</color> <!-- Black on Light Green -->
+    <color name="colorOnSecondaryContainer">#000000</color> <!-- Black on Light Orange -->
+
 </resources>

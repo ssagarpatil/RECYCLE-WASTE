@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+    <item
+        android:id="@+id/nav_home"
+        android:icon="@drawable/img"
+        android:title="Home" />
+    <item
+        android:id="@+id/nav_waste"
+        android:icon="@drawable/ic_recycle"
+        android:title="Recycle" />
+    <item
+        android:id="@+id/nav_food"
+        android:icon="@drawable/ic_food"
+        android:title="Food" />
+    <item
+        android:id="@+id/nav_centers"
+        android:icon="@drawable/ic_place"
+        android:title="Centers" />
+    <item
+        android:id="@+id/nav_rewards"
+        android:icon="@drawable/ic_rewards"
+        android:title="Rewards" />
+</menu>
