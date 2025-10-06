@@ -1,0 +1,68 @@
+{
+  "project_info": {
+    "project_number": "886758501437",
+    "firebase_url": "https://smart-order-80d5b-default-rtdb.firebaseio.com",
+    "project_id": "smart-order-80d5b",
+    "storage_bucket": "smart-order-80d5b.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886758501437:android:a0ab6e51d199d4bc280e54",
+        "android_client_info": {
+          "package_name": "com.SMARTWORK.smartorder"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCa3EczDOUulsyBWD0zMWecRpx3BKJiCxk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886758501437:android:93da019b23f71a6e280e54",
+        "android_client_info": {
+          "package_name": "com.ss.recyclewaste"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCa3EczDOUulsyBWD0zMWecRpx3BKJiCxk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    },
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:886758501437:android:1194ca60815e6e95280e54",
+        "android_client_info": {
+          "package_name": "com.ss.smartorder"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCa3EczDOUulsyBWD0zMWecRpx3BKJiCxk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
