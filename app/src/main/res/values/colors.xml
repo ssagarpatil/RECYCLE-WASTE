@@ -31,5 +31,19 @@
     <color name="colorOnAccent">#FFFFFF</color>        <!-- White on Purple -->
     <color name="colorOnPrimaryContainer">#000000</color> <!-- Black on Light Green -->
     <color name="colorOnSecondaryContainer">#000000</color> <!-- Black on Light Orange -->
+        <!-- Primary Green Theme -->
+        <color name="primary_green">#2E7D32</color>
+        <color name="light_green">#E8F5E8</color>
+        <color name="dark_green">#1B5E20</color>
+
+        <!-- Accent Colors -->
+        <color name="accent_orange">#FF8F00</color>
+        <color name="accent_blue">#1976D2</color>
+        <color name="accent_purple">#7B1FA2</color>
+
+        <!-- Background -->
+        <color name="background_light">#F8F9FA</color>
+        <color name="surface_white">#FFFFFF</color>
+
 
 </resources>

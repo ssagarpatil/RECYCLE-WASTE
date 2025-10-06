@@ -2,6 +2,8 @@ package com.ss.recyclewaste;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
+import android.content.SharedPreferences;
 import android.os.Bundle;
 import android.view.LayoutInflater;
 import android.view.View;
@@ -15,6 +17,8 @@ import androidx.cardview.widget.CardView;
 
 public class SettingsFragment extends Fragment {
 
+    private SharedPreferences sharedPreferences;
+
     @Nullable
     @Override
     public View onCreateView(@NonNull LayoutInflater inflater,
@@ -22,11 +26,13 @@ public class SettingsFragment extends Fragment {
                              @Nullable Bundle savedInstanceState) {
         View view = inflater.inflate(R.layout.fragment_settings, container, false);
 
+        // Initialize SharedPreferences for user login data
+        sharedPreferences = getActivity().getSharedPreferences("loginPrefs", getActivity().MODE_PRIVATE);
+
         // Language Card
         CardView cardLanguage = view.findViewById(R.id.card_language);
         TextView tvLanguage = view.findViewById(R.id.tv_language);
 
-        // You can save the selected language in SharedPreferences later
         cardLanguage.setOnClickListener(v -> {
             new AlertDialog.Builder(getContext())
                     .setTitle("Select Language")
@@ -45,6 +51,18 @@ public class SettingsFragment extends Fragment {
                     .show();
         });
 
+        // Notifications Card
+        CardView cardNotifications = view.findViewById(R.id.card_notifications);
+        cardNotifications.setOnClickListener(v -> {
+            Toast.makeText(getContext(), "Notifications settings", Toast.LENGTH_SHORT).show();
+        });
+
+        // Logout Card
+        CardView cardLogout = view.findViewById(R.id.card_logout);
+        cardLogout.setOnClickListener(v -> {
+            showLogoutConfirmationDialog();
+        });
+
         // About Card
         CardView cardAbout = view.findViewById(R.id.card_about);
         cardAbout.setOnClickListener(v ->
@@ -61,6 +79,56 @@ public class SettingsFragment extends Fragment {
             Toast.makeText(getContext(), "Contact: support@recyclewaste.com", Toast.LENGTH_LONG).show();
         });
 
+        // Privacy Policy Card
+        CardView cardPrivacy = view.findViewById(R.id.card_privacy);
+        cardPrivacy.setOnClickListener(v -> {
+            new AlertDialog.Builder(getContext())
+                    .setTitle("Privacy Policy")
+                    .setMessage("Your privacy is important to us. We collect minimal data and never share your personal information with third parties without your consent.")
+                    .setPositiveButton("OK", null)
+                    .show();
+        });
+
         return view;
+    }
+
+    private void showLogoutConfirmationDialog() {
+        new AlertDialog.Builder(getContext())
+                .setTitle("Logout Confirmation")
+                .setMessage("Are you sure you want to logout from your account?")
+                .setIcon(android.R.drawable.ic_dialog_alert)
+                .setPositiveButton("Yes, Logout", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        performLogout();
+                    }
+                })
+                .setNegativeButton("Cancel", new DialogInterface.OnClickListener() {
+                    @Override
+                    public void onClick(DialogInterface dialog, int which) {
+                        dialog.dismiss();
+                    }
+                })
+                .show();
+    }
+
+    private void performLogout() {
+        // Clear SharedPreferences
+        SharedPreferences.Editor editor = sharedPreferences.edit();
+        editor.clear();
+        editor.apply();
+
+        // Show logout success message
+        Toast.makeText(getContext(), "Successfully logged out", Toast.LENGTH_SHORT).show();
+
+        // Navigate to login activity (replace MainActivity with your login activity)
+        Intent intent = new Intent(getActivity(), MainActivity.class); // Change to your login activity
+        intent.setFlags(Intent.FLAG_ACTIVITY_NEW_TASK | Intent.FLAG_ACTIVITY_CLEAR_TASK);
+        startActivity(intent);
+
+        // Finish current activity to prevent back navigation
+        if (getActivity() != null) {
+            getActivity().finish();
+        }
     }
 }

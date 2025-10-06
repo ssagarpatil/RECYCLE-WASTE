@@ -1,0 +1,21 @@
+<vector xmlns:android="http://schemas.android.com/apk/res/android"
+    android:width="24dp"
+    android:height="24dp"
+    android:viewportWidth="24"
+    android:viewportHeight="24">
+
+    <!-- Corner Brackets -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M2,2h6v2H4v4H2V2zM18,2h4v6h-2V4h-4V2zM22,18v4h-6v-2h4v-4H22zM6,20v2H2v-6h2v4H6z"/>
+
+    <!-- QR Pattern -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M8,8h2v2H8V8zM14,8h2v2h-2V8zM8,14h2v2H8V14z"/>
+
+    <!-- Center Elements -->
+    <path
+        android:fillColor="#FFFFFF"
+        android:pathData="M11,11h1v1h-1V11zM13,11h1v1h-1V11zM12,13h2v1h-2V13z"/>
+</vector>

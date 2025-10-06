@@ -1,103 +1,157 @@
 <?xml version="1.0" encoding="utf-8"?>
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:background="#F5F5F5"
+    android:background="@drawable/splash_bg"
     android:padding="24dp">
 
-    <ImageView
-        android:id="@+id/ivLogo"
-        android:layout_width="100dp"
-        android:layout_height="100dp"
-        android:src="@drawable/ic_launcher_foreground"
-        android:contentDescription="App Logo"
+    <!-- Logo Section -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvLogo"
+        android:layout_width="120dp"
+        android:layout_height="120dp"
+        app:cardCornerRadius="60dp"
+        app:cardElevation="8dp"
+        app:cardBackgroundColor="#FFFFFF"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="64dp" />
+        android:layout_marginTop="48dp">
+
+        <ImageView
+            android:id="@+id/ivLogo"
+            android:layout_width="80dp"
+            android:layout_height="80dp"
+            android:src="@drawable/person"
+            android:contentDescription="App Logo"
+            android:layout_gravity="center"
+            app:tint="#0D0D0D" />
+
+    </androidx.cardview.widget.CardView>
 
     <TextView
         android:id="@+id/tvTitle"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="Login to Recharge Master"
-        android:textSize="26sp"
+        android:text="Recyckle Waste "
+        android:textSize="28sp"
         android:textStyle="bold"
-        android:textColor="#212121"
-        app:layout_constraintTop_toBottomOf="@id/ivLogo"
+        android:textColor="#FBFCFD"
+        app:layout_constraintTop_toBottomOf="@id/cvLogo"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp" />
+        android:layout_marginTop="24dp" />
 
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilMobile"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
-        android:layout_width="0dp"
+    <TextView
+        android:id="@+id/tvSubtitle"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:hint="Mobile Number"
-        app:startIconDrawable="@drawable/ic_phone"
-        app:errorEnabled="true"
+        android:text="Sign in to continue"
+        android:textSize="16sp"
+        android:textColor="#F5F7F8"
         app:layout_constraintTop_toBottomOf="@id/tvTitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="48dp">
+        android:layout_marginTop="8dp" />
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etMobile"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:inputType="phone"
-            android:maxLength="10" />
-    </com.google.android.material.textfield.TextInputLayout>
-
-    <com.google.android.material.textfield.TextInputLayout
-        android:id="@+id/tilPin"
-        style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+    <!-- Login Form Card -->
+    <androidx.cardview.widget.CardView
+        android:id="@+id/cvLoginForm"
         android:layout_width="0dp"
         android:layout_height="wrap_content"
-        android:hint="PIN (4 digits)"
-        app:startIconDrawable="@drawable/ic_lock"
-        app:passwordToggleEnabled="true"
-        app:errorEnabled="true"
-        app:layout_constraintTop_toBottomOf="@id/tilMobile"
+        app:cardCornerRadius="16dp"
+        app:cardElevation="12dp"
+        app:cardBackgroundColor="#FFFFFF"
+        app:layout_constraintTop_toBottomOf="@id/tvSubtitle"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp">
+        android:layout_marginTop="40dp">
 
-        <com.google.android.material.textfield.TextInputEditText
-            android:id="@+id/etPin"
+        <LinearLayout
             android:layout_width="match_parent"
             android:layout_height="wrap_content"
-            android:inputType="numberPassword"
-            android:maxLength="4" />
-    </com.google.android.material.textfield.TextInputLayout>
+            android:orientation="vertical"
+            android:padding="24dp">
 
-    <com.google.android.material.button.MaterialButton
-        android:id="@+id/btnLogin"
-        android:layout_width="0dp"
-        android:layout_height="wrap_content"
-        android:text="Login"
-        android:textColor="#FFFFFF"
-        app:backgroundTint="#2196F3"
-        app:cornerRadius="8dp"
-        app:layout_constraintTop_toBottomOf="@id/tilPin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="32dp" />
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilMobile"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Mobile Number"
+                app:startIconTint="#1976D2"
+                app:boxStrokeColor="#1976D2"
+                app:hintTextColor="#1976D2"
+                app:errorEnabled="true"
+                app:errorTextColor="#F44336"
+                android:layout_marginBottom="16dp">
 
-    <TextView
-        android:id="@+id/tvRegister"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="New Owner? Register"
-        android:textSize="14sp"
-        android:textColor="#2196F3"
-        app:layout_constraintTop_toBottomOf="@id/btnLogin"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
-        android:layout_marginTop="16dp"
-        android:clickable="true"
-        android:focusable="true" />
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etMobile"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="phone"
+                    android:maxLength="10"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.textfield.TextInputLayout
+                android:id="@+id/tilPin"
+                style="@style/Widget.MaterialComponents.TextInputLayout.OutlinedBox"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="PIN (4 digits)"
+                app:startIconTint="#1976D2"
+                app:passwordToggleEnabled="true"
+                app:passwordToggleTint="#1976D2"
+                app:boxStrokeColor="#1976D2"
+                app:hintTextColor="#1976D2"
+                app:errorEnabled="true"
+                app:errorTextColor="#F44336"
+                android:layout_marginBottom="24dp">
+
+                <com.google.android.material.textfield.TextInputEditText
+                    android:id="@+id/etPin"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:inputType="numberPassword"
+                    android:maxLength="4"
+                    android:textColor="#212121"
+                    android:textSize="16sp" />
+            </com.google.android.material.textfield.TextInputLayout>
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btnLogin"
+                android:layout_width="match_parent"
+                android:layout_height="56dp"
+                android:text="LOGIN"
+                android:textColor="#FFFFFF"
+                android:textSize="16sp"
+                android:textStyle="bold"
+                app:backgroundTint="#2D5B2F"
+                app:cornerRadius="12dp"
+                app:elevation="8dp"
+                app:rippleColor="#BBDEFB"
+                android:layout_marginBottom="16dp" />
+
+            <TextView
+                android:id="@+id/tvRegister"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="New Owner? Register Here"
+                android:textSize="14sp"
+                android:textColor="#070707"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:clickable="true"
+                android:focusable="true"
+                android:foreground="?android:attr/selectableItemBackground" />
+
+        </LinearLayout>
+
+    </androidx.cardview.widget.CardView>
 
 </androidx.constraintlayout.widget.ConstraintLayout>
